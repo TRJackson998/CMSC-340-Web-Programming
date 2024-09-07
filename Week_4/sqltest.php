@@ -45,12 +45,12 @@ _END;
 $query = "SELECT * FROM classics";
 $result = $pdo->query($query);
 
-while ($row = $result->fetch()) {
-  $r0 = htmlspecialchars($row['author']);
-  $r1 = htmlspecialchars($row['title']);
-  $r2 = htmlspecialchars($row['category']);
-  $r3 = htmlspecialchars($row['year']);
-  $r4 = htmlspecialchars($row['isbn']);
+while ($row = $result->fetch(PDO::FETCH_OBJ)) {
+  $r0 = htmlspecialchars($row->author);
+  $r1 = htmlspecialchars($row->title);
+  $r2 = htmlspecialchars($row->category);
+  $r3 = htmlspecialchars($row->year);
+  $r4 = htmlspecialchars($row->isbn);
 
   echo <<<_END
   <pre>

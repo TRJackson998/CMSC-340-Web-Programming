@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta
+    author="Terrence Jackson"
+    purpose="Week 5 Discussion"
+    course="CMSC 340"
+    date="Sept 21 2024"
+  />
+  <head>
+    <title>Week 6 Discussion</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // class of course objects
+      function Course(code, credit) {
+        this.code = code;
+        this.credit = credit;
+
+        this.showCourse = function () {
+          document.write(this.code + ", " + this.credit + "<br>");
+        };
+      }
+
+      // associative array of course codes corresponding to credits
+      assocArray = {
+        "CMSC 335": 3,
+        "SDEV 300": 3,
+        "WRTG 393": 3,
+        "CMSC 307": 3,
+        "CMSC 340": 3,
+        "CMSC 430": 3,
+        "CMSC 451": 3,
+      };
+
+      // init total credits
+      totalCredit = 0;
+      objectArray = [];
+
+      // Associative array
+      document.write("JavaScript Associative arrays:<br>");
+      for (course in assocArray) {
+        credit = assocArray[course]; // pull out credit value for reuse
+        document.write(course + " : " + credit + "<br>"); // write this course
+        objectArray.push(new Course(course, credit)); // add this course to object array
+        totalCredit += credit; // update total credit
+      }
+      document.write(
+        "Total credit hours over last 3 terms = " + totalCredit + "<br>"
+      );
+
+      // Object array
+      totalCredit = 0;
+      document.write("<br>JavaScript Array of Objects:<br>");
+      for (course in objectArray) {
+        objectArray[course].showCourse(); // write this course
+        totalCredit += objectArray[course].credit; // update total credit
+      }
+      document.write(
+        "Total credit hours over last 3 terms = " + totalCredit + "<br>"
+      );
+    </script>
+    <noscript>
+      Your browser doesn't support or has disabled JavaScript
+    </noscript>
+  </body>
+</html>

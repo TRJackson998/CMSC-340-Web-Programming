@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta
+    author="Terrence Jackson"
+    purpose="Week 5 Assignment"
+    course="CMSC 340"
+    date="Sept 21 2024"
+  />
+  <head>
+    <title>Week 6 Assignment</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // class of course objects
+      function Course(code, title, creditHours) {
+        this.code = code;
+        this.title = title;
+        this.creditHours = creditHours;
+
+        this.showCourse = function () {
+          document.write(
+            "Code = " +
+              this.code +
+              "<br>Title = " +
+              this.title +
+              "<br>Credit Hours = " +
+              this.creditHours +
+              "<br>"
+          );
+        };
+      }
+      function taken115(element, index, array) {
+        return element.code == "CMSC 115";
+      }
+
+      // numeric array of Course objects
+      objectArray = [
+        new Course("CMSC 335", "Object-Oriented Concurrent Programming", 3),
+        new Course("SDEV 300", "Building Secure Python Applications", 3),
+        new Course("WRTG 393", "Advanced Technical Writing", 3),
+        new Course("CMSC 307", "Artificial Intelligence Applications", 3),
+        new Course("CMSC 340", "Web Programming", 3),
+        new Course("CMSC 430", "Compiler Theory and Design", 3),
+        new Course("CMSC 451", "Design Computer Algorithms", 3),
+      ];
+
+      // calc and display number of courses
+      document.write(
+        "The number of UMGC courses I took over the last 3 terms = " +
+          objectArray.length +
+          "<br><br>These courses are:<br>"
+      );
+
+      // iterate over array
+      for (course in objectArray) {
+        document.write("<br>Course " + ++course + " information:<br>");
+        objectArray[--course].showCourse();
+      }
+
+      // taken 115?
+      result = objectArray.some(taken115);
+      writeResult = result ? "Yes, I have" : "No, I have not";
+      document.write("<br>" + writeResult + " taken the CMSC 115 course.<br>");
+    </script>
+    <noscript>
+      Your browser doesn't support or has disabled JavaScript
+    </noscript>
+  </body>
+</html>

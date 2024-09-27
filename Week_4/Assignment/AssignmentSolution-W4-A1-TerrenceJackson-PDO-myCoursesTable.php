@@ -38,7 +38,7 @@ When the user enters values in the fields of the HTML form and clicks the add bu
 
 Terrence Jackson
 Week 4 Assignment
-CMSC 430
+CMSC 340
 Last Edited: Sept 7 2024
 */
 require_once 'login.php';

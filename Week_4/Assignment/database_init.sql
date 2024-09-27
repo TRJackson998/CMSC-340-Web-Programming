@@ -5,7 +5,7 @@
  Based on SQL-Script-For-Publications.sql provided in Week 4 Discussion
  
  Terrence Jackson
- CMSC 430
+ CMSC 340
  Week 4 Assignment
  Last Edited: Sept 7 2024
  */

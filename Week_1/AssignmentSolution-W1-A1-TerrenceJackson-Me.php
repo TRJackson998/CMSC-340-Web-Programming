@@ -3,7 +3,7 @@
 Develop a PHP Script to Print out Information about You & about Earth Volume
 ============================================================================
 Terrence Jackson
-CMSC 430
+CMSC 340
 Last Edited: Aug 9 2024
 Due: Aug 27 2024
 */

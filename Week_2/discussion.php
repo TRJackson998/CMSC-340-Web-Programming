@@ -15,7 +15,7 @@ Instantiate two objects from the User class called user1 and user2 and assign va
 Invoke the printUser() method on both user1 and user2 objects to print out the values assigned to their corresponding properties.
 
 Terrence Jackson
-CMSC 430
+CMSC 340
 Last Edited: Aug 13 2024
 */
 class User

@@ -19,7 +19,7 @@ Tally up the total credit hours of all elements of the array and print them out 
 
 Terrence Jackson
 Week 3 Discussion
-CMSC 430
+CMSC 340
 Last Edited: Aug 29 2024
 */
 

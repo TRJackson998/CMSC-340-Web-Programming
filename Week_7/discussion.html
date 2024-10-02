@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta
+    author="Terrence Jackson"
+    purpose="Week 7 Discussion"
+    course="CMSC 340"
+    date="Sept 27 2024"
+  />
+  <head>
+    <title>Week 7 Discussion</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // class of course objects
+      function Course(code, title, creditHours) {
+        this.code = code;
+        this.title = title;
+        this.creditHours = creditHours;
+      }
+
+      // function to update the selected course list and credit total
+      function updateSelected() {
+        // update selected list
+        i = select.selectedIndex;
+        course = select.options.item(i).text;
+        selected.innerHTML += course + "<br>";
+
+        // update credit total
+        value = select.options.item(i).value;
+        intTotalCredits += +value;
+        totalCredits.innerHTML = intTotalCredits;
+      }
+
+      // numeric array of Course objects
+      objectArray = [
+        new Course("CMSC 335", "Object-Oriented Concurrent Programming", 3),
+        new Course("SDEV 300", "Building Secure Python Applications", 3),
+        new Course("WRTG 393", "Advanced Technical Writing", 3),
+        new Course("CMSC 307", "Artificial Intelligence Applications", 3),
+        new Course("CMSC 340", "Web Programming", 3),
+        new Course("CMSC 430", "Compiler Theory and Design", 3),
+        new Course("CMSC 451", "Design Computer Algorithms", 3),
+      ];
+
+      // select element
+      select = document.createElement("select");
+      select.name = "course_select";
+      select.id = "course_select";
+      select.size = 7;
+
+      // p of selected elements
+      selected = document.createElement("p");
+      selected.name = "courses_selected";
+      selected.id = "courses_selected";
+
+      // p of total credit
+      totalCredits = document.createElement("p");
+      totalCredits.name = "courses_totalCredits";
+      totalCredits.id = "courses_totalCredits";
+      intTotalCredits = 0;
+      totalCredits.innerHTML = intTotalCredits;
+
+      // iterate over array to add/update options
+      for (course in objectArray) {
+        this_course = objectArray[course];
+        select.innerHTML +=
+          " <option value=" +
+          this_course.creditHours +
+          ' onclick="updateSelected();">' + // call update onclick
+          this_course.code +
+          "</option>";
+      }
+
+      // write everything to document in order
+      document.write("Please register for next term courses:<br><br>");
+      document.body.append(select);
+
+      document.write("<br><br>You selected thus far:");
+      document.body.append(selected);
+
+      document.write("Total credit hours thus far:");
+      document.body.append(totalCredits);
+    </script>
+  </body>
+</html>

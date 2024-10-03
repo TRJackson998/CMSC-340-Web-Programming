@@ -6,7 +6,11 @@ function validate(form) {
   fail += validateAge(form.age.value);
   fail += validateEmail(form.email.value);
 
-  return true;
+  if (fail == "") return true;
+  else {
+    alert(fail);
+    return false;
+  }
 }
 
 function validateForename(field) {

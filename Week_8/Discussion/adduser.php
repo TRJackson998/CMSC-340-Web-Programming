@@ -203,8 +203,7 @@ function validate_email($field)
 
 function fix_string($string)
 {
-  if (get_magic_quotes_gpc())
-    $string = stripslashes($string);
+  $string = stripslashes($string);
   return htmlentities($string);
 }
 ?>

@@ -14,7 +14,6 @@ if (isset($_POST['selectCourseElementName'])) {
 
   $fail = "";
   $selectCourseElementName = fix_string($_POST['selectCourseElementName']);
-  //echo $selectCourseElementName . "<br>";
 
   $query = "SELECT * FROM w8_avail_Reg_Courses;";
   $result = $pdo->query($query);
@@ -84,8 +83,8 @@ foreach ($avail_Reg_Courses as $course) {
   echo "<option value='$code'>$code $title</option>";
 
   if ($registered == true) {
-    $currentRegisterdCourses = $currentRegisterdCourses . $code . " " . $title . "<br>";
-    $currentCreditHours = $currentCreditHours + $creditHours;
+    $currentRegisterdCourses = "$currentRegisterdCourses$code $title<br>";
+    $currentCreditHours += $creditHours;
   }
 
 }
@@ -121,5 +120,3 @@ function fix_string($string)
   $string = stripslashes($string);
   return htmlentities($string);
 }
-
-?>

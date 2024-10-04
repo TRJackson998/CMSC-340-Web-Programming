@@ -11,6 +11,3 @@ function validate_NotPreviouslyRegistered($avail_Reg_Courses, $selectCourseEleme
 {
   return "";
 }
-
-
-?>

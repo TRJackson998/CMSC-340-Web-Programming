@@ -17,24 +17,22 @@ class Course
 
     public function getCode()
     {
-        return($this->code);
+        return $this->code;
     }
 
     public function getTitle()
     {
-        return($this->title);
+        return $this->title;
     }
 
     public function getCreditHours()
     {
-        return($this->creditHours);
+        return $this->creditHours;
     }
 
     public function getRegistered()
     {
-        return($this->registered);
+        return $this->registered;
     }
 
 }
-
-?>

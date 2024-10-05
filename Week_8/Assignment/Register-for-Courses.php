@@ -1,4 +1,11 @@
 <?php
+/*
+Terrence Jackson
+CMSC 340
+Last Edited: Oct 5 2024
+Due: Oct 8 2024
+*/
+
 require_once 'login.php';
 require_once 'Course.php';
 require_once 'Validate.php';

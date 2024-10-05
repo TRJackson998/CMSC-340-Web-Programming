@@ -1,3 +1,10 @@
+/*
+Terrence Jackson
+CMSC 340
+Last Edited: Oct 5 2024
+Due: Oct 8 2024
+*/
+
 function validate(form) {
   fail = validate_NoMoreThan9CreditHours();
   fail += validate_NotPreviouslyRegistered();

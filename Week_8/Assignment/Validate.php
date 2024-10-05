@@ -1,5 +1,10 @@
 <?php
-
+/*
+Terrence Jackson
+CMSC 340
+Last Edited: Oct 5 2024
+Due: Oct 8 2024
+*/
 
 function validate_NoMoreThan9CreditHours($avail_Reg_Courses)
 {

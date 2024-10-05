@@ -1,5 +1,4 @@
 function validate(form) {
-  fail = "";
   fail = validate_NoMoreThan9CreditHours();
   fail += validate_NotPreviouslyRegistered();
 
@@ -11,6 +10,11 @@ function validate(form) {
 }
 
 function validate_NoMoreThan9CreditHours() {
+  currentCreditHours = document.getElementById("currentCreditHoursElementID");
+
+  if (parseInt(currentCreditHours.textContent) >= 9) {
+    return "You cannot register for more than 9 credit hours per term.\n";
+  }
   return "";
 }
 
